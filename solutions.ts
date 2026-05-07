@@ -78,3 +78,10 @@ class Student extends Person {
 
 // const student = new Student("Alice", 20, "A");
 // console.log(student.getDetails());
+
+// problem 07
+const getIntersection = (input1: number[], input2: number[]): number[] => {
+  return input1.filter((e) => input2.includes(e));
+};
+
+// console.log(getIntersection([1, 2, 7, 6], [3, 4, 5, 6, 7]));
