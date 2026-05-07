@@ -29,5 +29,27 @@ const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => {
   return obj[key];
 };
 
-const user = { id: 1, name: "john doe", age: 21 };
-console.log(getProperty(user, "id"));
+// const user = { id: 1, name: "john doe", age: 21 };
+// console.log(getProperty(user, "id"));
+
+//problem 05
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+}
+
+const toggleReadStatus = (input: Book): Book & { isRead: true } => {
+  return {
+    ...input,
+    isRead: true,
+  };
+};
+
+// const myBook = {
+//   title: "TypeScript Guide",
+//   apple: "156",
+//   author: "Jane Doe",
+//   publishedYear: 2024,
+// };
+// console.log(toggleReadStatus(myBook));
